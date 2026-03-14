@@ -5,13 +5,13 @@ resource "aws_instance" "d6instance" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "d6instanceaws"
+    Name = "d6instanceaws_from_linux"
   }
 }
 
 resource "aws_s3_bucket" "s3bucket" {
 
-  bucket = "backend-state-file20260314"
+  bucket = "backend-state-file20260314-edit"
 
   tags = {
     Name        = "day6-remote-lock-true"

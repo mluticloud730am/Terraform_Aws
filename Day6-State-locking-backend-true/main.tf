@@ -5,7 +5,7 @@ resource "aws_instance" "d6instance" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "d6instanceaws_from_linux"
+    Name = "d6instanceaws_from_linux_1"
   }
 }
 

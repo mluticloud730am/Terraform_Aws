@@ -7,7 +7,7 @@ variable "dev" {
 resource "aws_instance" "name1" {
   ami           = "ami-031283482dcfced88"
   instance_type = "t3.micro"
-  count         = var.dev ? 1 : 0
+  count         = var.dev ? 2 : 3
   #if dev true create one instance 
 
   tags = {

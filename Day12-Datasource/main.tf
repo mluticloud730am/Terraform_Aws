@@ -1,8 +1,9 @@
 data "aws_subnet" "name" {
   filter {
     name   = "tag:Name"
-    values = ["test"]
+    values = ["dev"]
   }
+  #data source is used to fetch the existing resource information. Here we are fetching the subnet information based on the tag name "dev"
 
 }
 
@@ -31,9 +32,5 @@ resource "aws_instance" "name" {
   ami           = data.aws_ami.amzlinux.id
   instance_type = "t2.micro"
   subnet_id     = data.aws_subnet.name.id
-
-  tags = {
-    Name = "datasource"
-  }
 
 }
